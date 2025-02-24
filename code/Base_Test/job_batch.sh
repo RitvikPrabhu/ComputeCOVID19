@@ -2,14 +2,12 @@
 #SBATCH --job-name=dd_b
 #SBATCH --partition=dgx_normal_q
 #SBATCH --time=36:00:00
-#SBATCH -A HPCBIGDATA2
+#SBATCH -A HPCBIGDATA
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=16
-#SBATCH --propagate=STACK
-#SBATCH --dependency=259619
-#SBATCH --exclusive
+
 ### change 5-digit MASTER_PORT as you wish, slurm will raise Error if duplicated with others
 ### change WORLD_SIZE as gpus/node * num_nodes
 export MASTER_PORT=8888
